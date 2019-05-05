@@ -14,10 +14,10 @@ A working example can be found here: [https://react-button-slider.herokuapp.com/
 
 ```
 # using yarn
-$ yarn add react-themer.js
+$ yarn add react-button-slider
 
 # using npm
-$ npm install react-themer.js
+$ npm install react-button-slider
 ```
 
 -----------------------------------------------------------------------------------
@@ -26,7 +26,7 @@ $ npm install react-themer.js
 ###Import the Slider component.
 
 ``` 
-import Slider from './components/slider';
+import Slider from 'react-button-slider';
 ```
 
 -----------------------------------------------------------------------------------
@@ -36,7 +36,7 @@ import Slider from './components/slider';
 
 ```
 import React from 'react';
-import Slider from './components/slider';
+import Slider from 'react-button-slider';
 import Bar from './components/bar';
 import './App.css';
 
