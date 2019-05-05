@@ -1,16 +1,16 @@
-#react-button-slider
+react-button-slider
 
-##A button operated slider for React based on CSS3 transform property.
-
------------------------------------------------------------------------------------
-
-A working example can be found here: [https://react-button-slider.herokuapp.com/]
+A button operated slider for React based on CSS3 transform property.
 
 -----------------------------------------------------------------------------------
 
-##Follow these steps to implement the slider and required buttons. 
+A working example can be found here: https://react-button-slider.herokuapp.com/
 
-##Step-0: Installation
+-----------------------------------------------------------------------------------
+
+Follow these steps to implement the slider and required buttons. 
+
+Step-0: Installation
 
 ```
 # using yarn
@@ -22,8 +22,8 @@ $ npm install react-button-slider
 
 -----------------------------------------------------------------------------------
 
-##Step-1: 
-###Import the Slider component.
+Step-1: 
+Import the Slider component.
 
 ``` 
 import Slider from 'react-button-slider';
@@ -31,8 +31,8 @@ import Slider from 'react-button-slider';
 
 -----------------------------------------------------------------------------------
 
-##Step-2: 
-###Pass the target component to Slider component as a prop under the name targetComponent.
+Step-2: 
+Pass the target component to Slider component as a prop under the name targetComponent.
 
 ```
 import React from 'react';
@@ -53,10 +53,10 @@ export default App;
 
 -----------------------------------------------------------------------------------
 
-##Step-3: 
-###(i) Extract the props wrapperRef, goLeft and goRight from this.props(or you can avoid destructuring if you want) inside the target component. 
-###(ii) Now pass the wrapperRef as a ref to the html(don't use overflow hidden for this element as its already done in the module) element that is going to slide. 
-###(iii) Finally add onClick listeners to any two elements(usually buttons) and then pass functions goLeft and goRight as event handlers to them.
+Step-3: 
+(i) Extract the props wrapperRef, goLeft and goRight from this.props(or you can avoid destructuring if you want) inside the target component. 
+(ii) Now pass the wrapperRef as a ref to the html(don't use overflow hidden for this element as its already done in the module) element that is going to slide. 
+(iii) Finally add onClick listeners to any two elements(usually buttons) and then pass functions goLeft and goRight as event handlers to them.
 
 ```
 import React, { Component } from 'react';
