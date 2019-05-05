@@ -1,16 +1,13 @@
-#react-button-slider
+##react-button-slider
 
-##A button operated slider for React based on CSS3 transform property.
+###A button operated slider for React based on CSS3 transform property.
 
------------------------------------------------------------------------------------
+A working example can be found here: https://react-button-slider.herokuapp.com/
 
-A working example can be found here: [https://react-button-slider.herokuapp.com/]
+###Follow these steps to implement the slider and required buttons. 
 
------------------------------------------------------------------------------------
-
-##Follow these steps to implement the slider and required buttons. 
-
-##Step-0: Installation
+###Step-0: 
+###Installation
 
 ```
 # using yarn
@@ -20,18 +17,14 @@ $ yarn add react-button-slider
 $ npm install react-button-slider
 ```
 
------------------------------------------------------------------------------------
-
-##Step-1: 
+###Step-1: 
 ###Import the Slider component.
 
 ``` 
 import Slider from 'react-button-slider';
 ```
 
------------------------------------------------------------------------------------
-
-##Step-2: 
+###Step-2: 
 ###Pass the target component to Slider component as a prop under the name targetComponent.
 
 ```
@@ -51,9 +44,7 @@ function App() {
 export default App;
 ```
 
------------------------------------------------------------------------------------
-
-##Step-3: 
+###Step-3: 
 ###(i) Extract the props wrapperRef, goLeft and goRight from this.props(or you can avoid destructuring if you want) inside the target component. 
 ###(ii) Now pass the wrapperRef as a ref to the html(don't use overflow hidden for this element as its already done in the module) element that is going to slide. 
 ###(iii) Finally add onClick listeners to any two elements(usually buttons) and then pass functions goLeft and goRight as event handlers to them.
@@ -76,5 +67,3 @@ class Bar extends Component {
 
 export default Bar;
 ```
------------------------------------------------------------------------------------
-
