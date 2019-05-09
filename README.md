@@ -1,14 +1,14 @@
-##react-button-slider
+react-button-slider
 
-###A button operated slider for React based on CSS3 transform property.
+A button operated slider for React based on CSS3 transform property.
 
 A working example can be found here: https://react-button-slider.herokuapp.com
 
-###Follow these steps to implement the slider and required buttons. 
+Follow these steps to implement the slider and required buttons. 
 
-###Step-0: 
+Step-0: 
 
-###Installation
+Installation
 
 ```
 # using yarn
@@ -26,7 +26,7 @@ Import the Slider component.
 import Slider from 'react-button-slider';
 ```
 
-###Step-2: 
+Step-2: 
 
 (i) Pass the target component to Slider component as a prop under the name targetComponent.
 
@@ -60,7 +60,7 @@ function App() {
 export default App;
 ```
 
-###Step-3: 
+Step-3: 
 
 (i) Extract the props wrapperRef, goLeft and goRight from this.props(or you can avoid destructuring if you want) inside the target component. 
 
