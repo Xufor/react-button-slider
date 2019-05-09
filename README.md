@@ -4,8 +4,6 @@
 
 A working example can be found here: https://react-button-slider.herokuapp.com
 
-###The npm link: https://www.npmjs.com/package/react-button-slider
-
 ###Follow these steps to implement the slider and required buttons. 
 
 ###Step-0: 
