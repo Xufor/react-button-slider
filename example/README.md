@@ -1,19 +1,9 @@
-## Install
+-----------------------------------------------------------------------------------
 
-```
-# using yarn
-$ yarn install
+Example of the repository at: https://github.com/Xufor/react-button-slider
 
-# using npm
-$ npm install
-```
+-----------------------------------------------------------------------------------
 
-## Start
+A working example can be found here: https://react-button-slider.herokuapp.com/
 
-```
-# using yarn
-$ yarn start
-
-# using npm
-$ npm start
-```
+-----------------------------------------------------------------------------------

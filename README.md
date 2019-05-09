@@ -1,16 +1,16 @@
-react-button-slider
+##react-button-slider
 
-A button operated slider for React based on CSS3 transform property.
+###A button operated slider for React based on CSS3 transform property.
 
 A working example can be found here: https://react-button-slider.herokuapp.com
 
-The npm link: https://www.npmjs.com/package/react-button-slider
+###The npm link: https://www.npmjs.com/package/react-button-slider
 
-Follow these steps to implement the slider and required buttons. 
+###Follow these steps to implement the slider and required buttons. 
 
-Step-0: 
+###Step-0: 
 
-Installation
+###Installation
 
 ```
 # using yarn
@@ -20,7 +20,7 @@ $ yarn add react-button-slider
 $ npm install react-button-slider
 ```
 
-Step-1: 
+###Step-1: 
 
 Import the Slider component.
 
@@ -28,9 +28,18 @@ Import the Slider component.
 import Slider from 'react-button-slider';
 ```
 
-Step-2: 
+###Step-2: 
 
-Pass the target component to Slider component as a prop under the name targetComponent.
+(i) Pass the target component to Slider component as a prop under the name targetComponent.
+
+(ii) Pass def and dur props to the Slider component.
+
+(iii) The prop def will set no. of pixels moved in one button press.
+
+(iv) The prop dur will set the duration in seconds in which one transition will complete.
+
+(v) All def, dur, targetComponent are mandatory props and cannot be neglected.
+
 
 ```
 import React from 'react';
@@ -41,7 +50,11 @@ import './App.css';
 function App() {
   return (
     <div className='App'>
-        <Slider targetComponent={Bar}/>
+        <Slider 
+          targetComponent={Bar}
+          def={330}
+          dur={1.5}
+        />
     </div>
   );
 }
@@ -49,7 +62,7 @@ function App() {
 export default App;
 ```
 
-Step-3: 
+###Step-3: 
 
 (i) Extract the props wrapperRef, goLeft and goRight from this.props(or you can avoid destructuring if you want) inside the target component. 
 

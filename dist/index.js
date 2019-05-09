@@ -42,7 +42,7 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Slider).call(this, props));
 
     _defineProperty(_assertThisInitialized(_this), "setTargetElementStyles", function () {
-      _this.ew.current.style.transition = 'all 1.5s ease-in-out';
+      _this.ew.current.style.transition = "all ".concat(_this.props.dur, "s ease-in-out");
     });
 
     _defineProperty(_assertThisInitialized(_this), "resizeListener", function () {
@@ -59,14 +59,15 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "leftClickHandler", function () {
+      var def = _this.props.def;
       var _this$state = _this.state,
           ow = _this$state.ow,
           sw = _this$state.sw,
           dev = _this$state.dev;
       var ew = _this.ew.current;
 
-      if (-1 * dev < sw - ow && -1 * (dev - 300) < sw - ow) {
-        dev -= 300;
+      if (-1 * dev < sw - ow && -1 * (dev - def) < sw - ow) {
+        dev -= def;
 
         _this.setState({
           dev: dev
@@ -85,11 +86,12 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "rightClickHandler", function () {
+      var def = _this.props.def;
       var dev = _this.state.dev;
       var ew = _this.ew.current;
 
-      if (dev < 0 && dev + 300 < 0) {
-        dev += 300;
+      if (dev < 0 && dev + def < 0) {
+        dev += def;
 
         _this.setState({
           dev: dev
