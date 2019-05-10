@@ -13,11 +13,13 @@ class Slider extends Component {
     }
 
     componentDidMount() {
+        let ew = this.ew.current;
         let gw = this.gw.current;
         let ow = gw.offsetWidth;
         let sw = gw.scrollWidth;
         this.setState({ow: ow, sw: sw});
         window.addEventListener('resize', this.resizeListener);
+        ew.addEventListener('resize', this.resizeListener);
         this.setTargetElementStyles();
     }
     
@@ -31,7 +33,12 @@ class Slider extends Component {
         this.setState({ow: gw.offsetWidth, sw: gw.scrollWidth, dev: 0});
         ew.style.transform = `translateX(0px)`;
     };
-    
+
+    updateStats = () => {
+        let gw = this.gw.current;
+        this.setState({ow: gw.offsetWidth, sw: gw.scrollWidth, dev: 0});
+    };
+
     componentWillUnmount() {
         window.removeEventListener('resize', this.resizeListener);
     }
@@ -74,6 +81,7 @@ class Slider extends Component {
                     wrapperRef={this.ew} 
                     goLeft={this.leftClickHandler} 
                     goRight={this.rightClickHandler}
+                    updateStats={this.updateStats}
                 />
             </div>
         );
@@ -81,6 +89,5 @@ class Slider extends Component {
 }
 
 export default Slider;
-
 
 

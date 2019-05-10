@@ -58,6 +58,16 @@ function (_Component) {
       ew.style.transform = "translateX(0px)";
     });
 
+    _defineProperty(_assertThisInitialized(_this), "updateStats", function () {
+      var gw = _this.gw.current;
+
+      _this.setState({
+        ow: gw.offsetWidth,
+        sw: gw.scrollWidth,
+        dev: 0
+      });
+    });
+
     _defineProperty(_assertThisInitialized(_this), "leftClickHandler", function () {
       var def = _this.props.def;
       var _this$state = _this.state,
@@ -127,6 +137,7 @@ function (_Component) {
   _createClass(Slider, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      var ew = this.ew.current;
       var gw = this.gw.current;
       var ow = gw.offsetWidth;
       var sw = gw.scrollWidth;
@@ -135,6 +146,7 @@ function (_Component) {
         sw: sw
       });
       window.addEventListener('resize', this.resizeListener);
+      ew.addEventListener('resize', this.resizeListener);
       this.setTargetElementStyles();
     }
   }, {
@@ -155,7 +167,8 @@ function (_Component) {
       }, _react["default"].createElement(Target, {
         wrapperRef: this.ew,
         goLeft: this.leftClickHandler,
-        goRight: this.rightClickHandler
+        goRight: this.rightClickHandler,
+        updateStats: this.updateStats
       }));
     }
   }]);

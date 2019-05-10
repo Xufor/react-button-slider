@@ -1,12 +1,12 @@
-react-button-slider
+##react-button-slider
 
-A button operated slider for React based on CSS3 transform property.
+###A button operated slider for React based on CSS3 transform property.
 
 A working example can be found here: https://react-button-slider.herokuapp.com
 
-Follow these steps to implement the slider and required buttons. 
+###Follow these steps to implement the slider and required buttons. 
 
-Step-0: 
+###Step-0: 
 
 Installation
 
@@ -18,7 +18,7 @@ $ yarn add react-button-slider
 $ npm install react-button-slider
 ```
 
-Step-1: 
+###Step-1: 
 
 Import the Slider component.
 
@@ -26,7 +26,7 @@ Import the Slider component.
 import Slider from 'react-button-slider';
 ```
 
-Step-2: 
+###Step-2: 
 
 (i) Pass the target component to Slider component as a prop under the name targetComponent.
 
@@ -60,7 +60,7 @@ function App() {
 export default App;
 ```
 
-Step-3: 
+###Step-3: 
 
 (i) Extract the props wrapperRef, goLeft and goRight from this.props(or you can avoid destructuring if you want) inside the target component. 
 
@@ -68,17 +68,19 @@ Step-3:
 
 (iii) Finally add onClick listeners to any two elements(usually buttons) and then pass functions goLeft and goRight as event handlers to them.
 
+Note: Sometimes when the element which is passed wrapperRef as a ref has a variable width over time. In that case you can use can use the updateStats function in the props and call it whenever someone enters the buttons. This will update the states in slider and prevent slider from stopping to work.
+
 ```
 import React, { Component } from 'react';
 
 class Bar extends Component {
     render() {
-        let {wrapperRef, goLeft, goRight} = this.props;
+        let {wrapperRef, goLeft, goRight, updateStats} = this.props;
         return(
             <React.Fragment>
                 <div ref={wrapperRef} id={'barWrapper'}/>
-                <button onClick={goLeft}>Go Left</button>
-                <button onClick={goRight}>Go Right</button>
+                <button onClick={goLeft} onMouseEnter={updateStats}>Go Left</button>
+                <button onClick={goRight} onMouseEnter={updateStats}>Go Right</button>
             </React.Fragment>
         );
     }
@@ -86,3 +88,4 @@ class Bar extends Component {
 
 export default Bar;
 ```
+ 
