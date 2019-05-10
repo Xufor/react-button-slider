@@ -18,7 +18,7 @@ $ yarn add react-button-slider
 $ npm install react-button-slider
 ```
 
-###Step-1: 
+Step-1: 
 
 Import the Slider component.
 
