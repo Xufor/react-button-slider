@@ -63,8 +63,7 @@ function (_Component) {
 
       _this.setState({
         ow: gw.offsetWidth,
-        sw: gw.scrollWidth,
-        dev: 0
+        sw: gw.scrollWidth
       });
     });
 
