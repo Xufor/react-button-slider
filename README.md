@@ -2,8 +2,6 @@ react-button-slider
 
 A button operated slider for React based on CSS3 transform property.
 
-A working example can be found here: https://react-button-slider.herokuapp.com
-
 Follow these steps to implement the slider and required buttons. 
 
 Step-0: 
